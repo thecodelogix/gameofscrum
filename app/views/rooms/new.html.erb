@@ -3,7 +3,11 @@
 <div class="w-full md:w-1/3 mx-auto p-8">
   <div class="py-4">
     <h1 class="text-3xl font-bold mb-2">Create Your Room</h1>
-    <p class="text-zinc-500">We just need to know what to call you, and we'll create a room for you.</p>
+    <% if user_signed_in? %>
+      <p class="text-zinc-500">You're one step away from creating a room.</p>
+    <% else %>
+      <p class="text-zinc-500">We just need to know what to call you, and we'll create a room for you.</p>
+    <% end %>
   </div>
   <%= form_for @room, url: rooms_path do %>
     <% unless user_signed_in? %>
