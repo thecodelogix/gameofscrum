@@ -1,0 +1,24 @@
+<% content_for(:title) {"Unlock your account"} %>
+
+<div class="w-full md:w-1/3 mx-auto p-8">
+  <div class="py-4">
+    <h2 class="text-3xl font-bold mb-2">Unlock Your Account</h2>
+    <p class="text-zinc-500">Please enter your email to receive instructions on how to unlock your account.</p>
+  </div>
+
+
+  <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "users/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-full" %>
+    </div>
+
+    <div class="actions my-4">
+      <%= f.submit "Resend unlock instructions", class: "btn btn-primary w-full" %>
+    </div>
+  <% end %>
+
+  <%= render "users/shared/links" %>
+</div>

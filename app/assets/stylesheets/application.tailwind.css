@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* custom variables */
+:root {
+  --primary-color: @apply text-indigo-600;
+  --primary-color-dark: @apply text-indigo-700;
+  --text-color: @apply text-zinc-800;
+}
+
+/* links */
+a {
+  @apply text-zinc-800 cursor-pointer hover:text-zinc-900 hover:underline;
+}
+
+/* buttons */
+.btn {
+  @apply font-semibold py-3 px-4 rounded;
+}
+.btn-primary {
+  @apply bg-zinc-800 text-white cursor-pointer hover:bg-zinc-900;
+}
+.btn-danger {
+  @apply bg-red-600 text-white cursor-pointer hover:bg-red-700;
+}
+
+/* forms */
+form .field {
+  @apply my-4;
+}
+
+form label {
+  @apply font-bold text-sm mb-2 text-zinc-800 block;
+}
+
+/* global input styles */
+[type='text'],
+[type='email'],
+[type='url'],
+[type='password'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='search'],
+[type='tel'],
+[type='checkbox'],
+[type='radio'],
+[type='time'],
+[type='week'],
+[multiple],
+textarea,
+select {
+  @apply outline-none border-zinc-300;
+}
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='checkbox']:focus,
+[type='radio']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  /* @apply outline-none border-blue-600; */
+}
