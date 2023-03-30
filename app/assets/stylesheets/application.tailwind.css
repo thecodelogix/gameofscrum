@@ -44,7 +44,7 @@ form label {
 }
 
 .help-text {
-  @apply text-xs text-zinc-500 my-2;
+  @apply text-sm text-zinc-500 my-2;
 }
 
 /* global input styles */

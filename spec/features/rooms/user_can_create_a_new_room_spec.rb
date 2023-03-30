@@ -11,7 +11,7 @@ feature "User can create a new room", js: true do
       room = Room.last
       expect(current_path).to eq room_path(room.number)
       expect(page).to have_content "Room User"
-      expect(page).to have_content "Room Number: #{room.number}"
+      expect(page).to have_content "Room number: #{room.number}"
     end
   end
 end

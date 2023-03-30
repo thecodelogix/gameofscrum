@@ -1,5 +1,6 @@
 class Room < ApplicationRecord
   belongs_to :user
+  has_many :room_users, dependent: :destroy
 
   validates :name, presence: true
   validates :number, presence: true, uniqueness: true
