@@ -9,9 +9,18 @@
   --text-color: @apply text-zinc-800;
 }
 
-/* links */
-a {
-  @apply text-zinc-800 cursor-pointer hover:text-zinc-900 hover:underline;
+/* alerts */
+.alert {
+  @apply p-2 w-full text-center;
+}
+.alert-alert, .alert-error {
+  @apply bg-red-600 text-red-100;
+}
+.alert-notice {
+  @apply bg-yellow-200 text-yellow-800;
+}
+.alert-success {
+  @apply bg-green-600 text-green-100;
 }
 
 /* buttons */

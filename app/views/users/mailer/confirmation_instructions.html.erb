@@ -1,5 +1,11 @@
-<p>Welcome <%= @email %>!</p>
+<h1>Confirm your account</h1>
+<p>Welcome <strong><%= @email %></strong>!</p>
 
 <p>You can confirm your account email through the link below:</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p><%= link_to "Confirm my account", confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p style="margin-top: 2rem;">
+  Welcome to the Game of Scrum,<br/>
+  <strong><%= link_to "gameofscrum.com", root_url %></strong>
+</p>

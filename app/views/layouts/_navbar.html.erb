@@ -1,0 +1,17 @@
+<div class="navbar bg-zinc-800 text-zinc-300 flex p-4" role="navigation" aria-label="main navigation">
+  <div class="flex-grow">
+    <%= link_to "scrum poker", root_path, class: "text-white text-2xl font-medium" %>
+  </div>
+  <div class="flex gap-2">
+    <% if user_signed_in? %>
+      <div>
+        <%= link_to current_user.username, edit_user_registration_path, class: "text-white font-bold" %>
+      </div>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, data: { turbo_method: "delete", turbo_confirm: "Are you sure you want to log out?" }, class: "text-zinc-300 hover:text-white" %>
+    <% else %>
+      <%= link_to "Sign in", new_user_session_path, class: "text-zinc-300 hover:text-white" %>
+      <span class="text-zinc-500">|</span>
+      <%= link_to "Sign up", new_user_registration_path, class: "text-zinc-300 hover:text-white" %>
+    <% end %>
+  </div>
+</div>
