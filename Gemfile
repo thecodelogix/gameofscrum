@@ -30,6 +30,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "better_errors"
   gem "hotwire-livereload"
   gem "letter_opener"
   gem "web-console"

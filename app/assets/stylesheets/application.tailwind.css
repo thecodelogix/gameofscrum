@@ -43,6 +43,10 @@ form label {
   @apply font-bold text-sm mb-2 text-zinc-800 block;
 }
 
+.help-text {
+  @apply text-xs text-zinc-500 my-2;
+}
+
 /* global input styles */
 [type='text'],
 [type='email'],
