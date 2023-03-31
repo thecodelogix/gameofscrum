@@ -34,11 +34,9 @@ module Rooms
     def create_and_return_guest_user
       unique_key = SecureRandom.alphanumeric(12)
       user = User.new(
-        name: display_name,
-        username: "guest-#{unique_key}",
+        name: display_name, username: "guest-#{unique_key}",
         email: "guest-#{unique_key}@gameofscrum.com",
-        password: SecureRandom.alphanumeric(24),
-        guest: true
+        password: SecureRandom.alphanumeric(24), guest: true
       )
       user.skip_confirmation!
       user.save!

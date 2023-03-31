@@ -86,3 +86,26 @@ textarea:focus,
 select:focus {
   /* @apply outline-none border-blue-600; */
 }
+
+
+/* CSS for the dropdown menu */
+.dropdown-menu {
+  /* Set initial styles */
+  transform: scale(0.95);
+  opacity: 0;
+  /* Set transition styles */
+  transition: transform 100ms ease-out, opacity 100ms ease-out;
+}
+/* CSS for when the menu is shown */
+.dropdown-menu.show {
+  transform: scale(1);
+  opacity: 1;
+}
+/* CSS for when the menu is hidden */
+.dropdown-menu.hide {
+  transform: scale(0.95);
+  opacity: 0;
+  display: none;
+  transition-duration: 75ms;
+  transition-timing-function: ease-in;
+}
